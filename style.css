@@ -131,9 +131,30 @@ nav ul li a:hover {
 }
 
 #contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #f7ff0b;
-    padding: 20px;
+    padding: 20px 20px;
     border-radius: 8px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;          /* Coloca o h2 em cima do p */
+    justify-content: flex-start;
+}
+
+#contato .left h2, p {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
 }
 
 footer {
@@ -160,24 +181,47 @@ footer p {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
     }
 
     nav ul li {
         margin: 10px 0;
     }
+    
+    nav ul li a {
+        text-align: center;
+    }
 
-    #carrossel img {
+    .slides img {
         width: 100%;
         height: auto;
+    }
+
+    #contato {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #contato h2,
+    #contato p {
+        text-align: center;
+        margin: 0 0 10px 0; 
+    }
+
+    #contato form {
+        width: 100%;
+        gap: 15px;
     }
 
     #contato form input,
     #contato form textarea {
         width: 100%;
         padding: 10px;
-        margin-bottom: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
     }
 
     footer {
@@ -203,7 +247,7 @@ footer p {
         justify-content: space-around;
     }
 
-    #carrossel img {
+    .slides img {
         width: 100%;
         height: auto;
     }
@@ -265,6 +309,7 @@ h2 {
     font-size: 14px;
     color: #888;
 }
+
 
 
 @media (max-width: 768px) {
