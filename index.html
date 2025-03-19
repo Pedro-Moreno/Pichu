@@ -71,6 +71,35 @@
         </div>
     </section>
 
+    <section class="compra">
+        <h2>Selecione a Categoria</h2>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" name="categoria" value="minhaVida"> Minha Vida
+            </label>
+            <label>
+                <input type="checkbox" name="categoria" value="estudante"> Estudante
+            </label>
+        </div>
+
+        <h2>Quantidade de Ingressos</h2>
+        <div class="quantity">
+            <button onclick="alterarQuantidade(-1)">-</button>
+            <span id="quantidade">1</span>
+            <button onclick="alterarQuantidade(1)">+</button>
+        </div>
+
+        <h2>Opções de Pagamento</h2>
+        <div class="payment-options">
+            <label><input type="radio" name="pagamento" value="credito"> Cartão de Crédito</label>
+            <label><input type="radio" name="pagamento" value="debito"> Cartão de Débito</label>
+            <label><input type="radio" name="pagamento" value="pix"> Pix</label>
+            <label><input type="radio" name="pagamento" value="boleto"> Boleto</label>
+        </div>
+
+        <button id="finalizar">Finalizar Compra</button>
+    </section>
+
     <section id="contato">
         <div class="left">
             <h2>Fale Conosco!</h2>
@@ -104,6 +133,17 @@
         </div>
         <p> &copy; 2025 PICHU EVENTOS LTDA. - Todos os direitos reservados </p>
     </footer>
+
+    <script>
+        function alterarQuantidade(valor) {
+            let spanQuantidade = document.getElementById("quantidade");
+            let quantidade = parseInt(spanQuantidade.innerText);
+            
+            if (quantidade + valor > 0) {
+                spanQuantidade.innerText = quantidade + valor;
+            }
+        }
+    </script>
 </body>
 
 </html>
