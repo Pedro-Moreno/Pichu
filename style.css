@@ -43,6 +43,8 @@ nav ul li a:hover {
 .slides {
     display: flex;
     transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
 }
 
 .slides img {
@@ -130,6 +132,66 @@ nav ul li a:hover {
     background-color: #000;
 }
 
+.games-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    
+}
+
+#games-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.game-item {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+
+.game-item:hover {
+    transform: scale(1.05);
+}
+
+.game-team {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.game-time {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #777;
+}
+
+.game-date {
+    font-size: 14px;
+    color: #888;
+}
+
+
 .compra {
     margin: auto;
     background: #000;
@@ -137,6 +199,13 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     text-align: center;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
 }
 
 .compra h2 {
@@ -239,6 +308,10 @@ footer p {
     margin: 0;
 }
 
+footer .social-media {
+    display: flex;
+    list-style: none;
+}
 /* Media Queries para responsividade */
 
 /* Para telas pequenas (móveis) */
@@ -266,6 +339,20 @@ footer p {
     .slides img {
         width: 100%;
         height: auto;
+    }
+
+    #games-list {
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .game-item {
+        width: 100%; 
+        margin-bottom: 15px; 
+    }
+
+    h2 {
+        font-size: 22px; 
     }
 
     #contato {
@@ -304,95 +391,7 @@ footer p {
     }
 
     footer .social-media a {
-        margin: 0 10px;
-    }
-}
-
-/* Para telas maiores, como desktops */
-@media (min-width: 769px) {
-    nav ul {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .slides img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.games-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    
-}
-
-#games-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-
-.game-item {
-    background-color: #f0f0f0;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-
-.game-item:hover {
-    transform: scale(1.05);
-}
-
-.game-team {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.game-time {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #777;
-}
-
-.game-date {
-    font-size: 14px;
-    color: #888;
-}
-
-
-
-@media (max-width: 768px) {
-    .games-list {
-        justify-content: space-between;
-        padding: 0 15px;
-    }
-
-    .game-item {
-        width: 100%; 
-        margin-bottom: 15px; 
-    }
-
-    h2 {
-        font-size: 22px; 
+        margin: 0 0;
     }
 }
 
