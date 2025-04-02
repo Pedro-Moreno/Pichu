@@ -338,7 +338,7 @@ h2 {
     
 }
 
-.games-list {
+#games-list {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
