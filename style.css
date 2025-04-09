@@ -58,6 +58,11 @@ nav ul li a:hover {
     display: none;
 }
 
+.slide {
+    position: relative;
+    transition: 2s;
+}
+
 .manual-navigation {
     display: flex;
     justify-content: center; /* Garante que os botões fiquem centralizados */
@@ -89,12 +94,17 @@ nav ul li a:hover {
     margin-right: 10px;
 }
 
-#radio1:checked ~ .slide {
+#radio1:checked ~ .first {
     margin-left: 0;
 }
-
-#radio2:checked ~ .slide {
-    margin-left: -50%;
+#radio2:checked ~ .first {
+    margin-left: -100%;
+}
+#radio3:checked ~ .first {
+    margin-left: -200%;
+}
+#radio4:checked ~ .first {
+    margin-left: -300%;
 }
 
 .navigation-auto div{
@@ -127,8 +137,13 @@ nav ul li a:hover {
 #radio1:checked ~ .navigation-auto .auto-btn1 {
     background-color: #000;
 }
-
 #radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #000;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #000;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
     background-color: #000;
 }
 
