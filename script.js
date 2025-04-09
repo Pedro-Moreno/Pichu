@@ -22,3 +22,8 @@ function alterarQuantidade(valor) {
         spanQuantidade.innerText = quantidade + valor;
     }
 }
+
+function mostrarAlerta(){
+    alert("Você é fanatico por futebol? Então é muito bem vindo aqui!");
+    
+}
